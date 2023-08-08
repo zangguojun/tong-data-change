@@ -31,5 +31,10 @@ export class ContainerConfiguration {
   async onReady() {
     expect(this.defaultDataSource).toBeDefined();
     expect(this.defaultDataSource).toEqual(this.namedDataSource);
+
+    // const u = new UserEntity();
+    // u.name = 'oneuser1';
+    // const uu = await this.userModel.save(u);
+    // console.log('🚀~ 38 onReady uu', uu)
   }
 }
