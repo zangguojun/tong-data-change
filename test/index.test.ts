@@ -3,12 +3,12 @@ import * as custom from '../src';
 
 describe('/test/index.test.ts', () => {
   it('test component', async () => {
-    const app = await createLightApp('', {
+    const app = await createLightApp('base-record', {
       imports: [
         custom
       ]
     });
-    const bookService = await app.getApplicationContext().getAsync(custom.BookService);
-    expect(await bookService.getBookById()).toEqual('hello world');
+    const dataSourceManager = await app.getApplicationContext().getAsync(custom.dataSourceManager);
+    expect(await dataSourceManager).toBeDefined();
   });
 });
